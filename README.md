@@ -8,3 +8,7 @@ This is a personal dashboard application that uses GraphQL to fetch data from a 
 -   Displays data in a dashboard format
 -   Allows users to add, edit, and delete data
 -   Navigate though different sections of the dashboard
+
+## NOTE
+
+-   Delete simulates delete in browser dev tools console
