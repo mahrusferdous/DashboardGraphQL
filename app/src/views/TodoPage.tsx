@@ -4,16 +4,10 @@ import { Alert, Card, Container, Row, Spinner } from "react-bootstrap";
 import NavBar from "../components/NavBar";
 import "../App.css";
 
-interface Album {
+interface Todo {
     id: number;
     title: string;
-    photos: {
-        data: {
-            title: string;
-            url: string;
-            thumbnailUrl: string;
-        }[];
-    };
+    completed: string;
 }
 
 const AlbumPage = () => {
@@ -42,19 +36,11 @@ const AlbumPage = () => {
             <Container>
                 <h1>Posts</h1>
                 <Row>
-                    {data.albums.data.map(({ id, title, photos }: Album) => (
+                    {data.albums.data.map(({ id, title, completed }: Todo) => (
                         <Card key={id}>
                             <Card.Body>
                                 <Card.Title>{title}</Card.Title>
-                                <Card.Text>
-                                    {photos.data.map((photo, index) => (
-                                        <div className="m-5">
-                                            <img key={index} src={photo.thumbnailUrl} alt={photo.title} />
-                                            <Card.Text key={index}>{photo.title}</Card.Text>
-                                            <img key={index} src={photo.url} alt={photo.title} />
-                                        </div>
-                                    ))}
-                                </Card.Text>
+                                <Card.Text>{completed}</Card.Text>
                             </Card.Body>
                         </Card>
                     ))}

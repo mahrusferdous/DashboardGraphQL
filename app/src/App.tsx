@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import UpdatePostPage from "./views/UpdatePostPage";
 import ProfilePage from "./views/ProfilePage";
 import AlbumPage from "./views/AlbumPage";
+import TodoPage from "./views/TodoPage";
 
 function App() {
     return (
@@ -16,6 +17,8 @@ function App() {
                 <Route path="/post/update/:id" element={<UpdatePostPage />} />
                 <Route path="/users" element={<ProfilePage />} />
                 <Route path="/album" element={<AlbumPage />} />
+                <Route path="/users" element={<ProfilePage />} />
+                <Route path="/todo" element={<TodoPage />} />
             </Routes>
         </div>
     );
