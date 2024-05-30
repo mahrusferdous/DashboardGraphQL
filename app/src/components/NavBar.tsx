@@ -9,6 +9,7 @@ const NavBar = () => {
                     <Navbar.Brand href="#home">Navbar</Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link href="/users">Profiles</Nav.Link>
+                        <Nav.Link href="/album">Albums</Nav.Link>
                         <NavDropdown title="Post" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="/post">Posts</NavDropdown.Item>
                             <NavDropdown.Item href="/post/create">Create</NavDropdown.Item>
